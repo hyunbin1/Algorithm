@@ -26,7 +26,7 @@ public class test {
             }
             if(startIndex <= endIndex){
                 swapNumberArray(arr, startIndex, endIndex);
-                swapWordsArray();
+//                swapWordsArray();
                 startIndex++;
                 endIndex--;
             }
