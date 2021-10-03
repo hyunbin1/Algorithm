@@ -1,77 +1,54 @@
-// https://www.acmicpc.net/problem/11004
-
-//60200216 김현빈
-
-/* 문제 분석
-* 첫 번째 입력: 1. 배열의 원소 개수, 2. 정렬된 배열 중 몇 번째(k 번째) 원소를 찾을 지.
-* 두 번째 입력: 배열의 원소들
-*/
-
-/* 문제 풀이
-* 1. 입력 받기
-* 2. 배열 정렬하기.
-* 3. k번째 인덱스 출력하기.
-*/
-
-
 import java.io.*;
 import java.util.*;
 
 public class Number11004 {
 
-    // 반복 생략을 위해 swap 함수 만들기
-    public static void swap(int[])
+    public static void main(String[] args) throws Exception {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+        StringTokenizer st = new StringTokenizer(br.readLine());
 
-    // 파티션 나누기
-    public static int partition(int[] arr, int left, int right){
-        int pivot = (left + right)/2;
-
-    }
-
-
-
-
-
-
-
-
-
-
-
-    public static void main(String[] args) throws IOException {
-//        Scanner scanner = new Scanner(System.in); - 스캐너 시간오류 => 버퍼로 바꾸기
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(System.out));
-        StringTokenizer st = new StringTokenizer(reader.readLine());
-
-        // 배열의 원소 개수
-        int arrayNum = Integer.parseInt(st.nextToken());
-        int kIndex = Integer.parseInt(st.nextToken());
+        int number = Integer.parseInt(st.nextToken());
+        int KIndex = Integer.parseInt(st.nextToken());
 
         // 배열 입력받기
-        ArrayList <Integer> arr = new ArrayList<>();
-        int temp;
-        for(int i = 0; i < arrayNum; i++ ){
-            arr.add(Integer.parseInt(st.nextToken()));
+        int[] arr = new int[KIndex];
+        st = new StringTokenizer(br.readLine());
+        for (int i = 0; i < number; i++) {
+            arr[i] = (Integer.parseInt(st.nextToken()));
         }
 
-    //    #선택 정렬 알고리즘 작성 - 시간 초과
-    //    for(int i = 0; i < arr.length-1; i++){
-    //        for(int j = i+1; j < arr.length; j++){
-    //            if(arr[i] > arr[j]){
-    //                temp = arr[j];
-    //                arr[j] = arr[i];
-    //                arr[i] = temp;
-    //            }
-    //        }
-    //    }
+    /*
+        방법 1. 배열 정렬 메서드 사용하기
+        Collections.sort(list);
+        System.out.println(list.get(KIndex-1));
+    */
 
-        //정렬 함수 사용 - 시간 초과
-    //    Arrays.sort(arr);
-
-        Collections.sort(arr);
-
-        //정답 출력
-        System.out.println(arr.get(kIndex));
+        br.close();
+        bw.close();
     }
+
+    //방법 2. 직접 퀵선택정렬 구현하기
+    private static void swap(int[] arr, int num1, int num2){
+        int temp = arr[num1];
+        arr[num1] = arr[num2];
+        arr[num2] = temp;
+    }
+
+    private static int getRandomInt(int left, int right){
+        Random random = new Random();
+        if(right == left)  return left;
+        int offset = right - left;
+        System.out.println(offset);
+        System.out.println(left);
+        System.out.println(right);
+        return random.nextInt(offset)+left;
+    }
+
+
+        
+        
+        
+
+
 }
