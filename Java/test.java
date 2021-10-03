@@ -1,16 +1,26 @@
-import java.util.Random;
+import java.io.*;
+import java.util.*;
 
-public class test{
-    public static void main(String[] args) {
-        System.out.println(getRandomInt(1, 5));
-    }
-    private static int getRandomInt(int left, int right){
-        Random random = new Random();
-        if(right == left)  return left;
-        int offset = right - left;
-        System.out.println(offset);
-        System.out.println(left);
-        System.out.println(right);
-        return random.nextInt(offset)+left;
+public class test {
+    public static void main(String[] args) throws Exception {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+        StringTokenizer st = new StringTokenizer(br.readLine());
+
+        int number = Integer.parseInt(st.nextToken());
+        int KIndex = Integer.parseInt(st.nextToken());
+        ArrayList<Integer> list = new ArrayList<>();
+        st = new StringTokenizer(br.readLine());
+
+        for (int i = 0; i < number; i++) {
+            list.add(Integer.parseInt(st.nextToken()));
+        }
+
+        Collections.sort(list);
+
+        System.out.println(list.get(KIndex-1));
+
+        br.close();
+        bw.close();
     }
 }
