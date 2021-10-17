@@ -2,25 +2,17 @@ import java.io.*;
 import java.util.*;
 
 public class test {
-    public static void main(String[] args) throws Exception {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-        StringTokenizer st = new StringTokenizer(br.readLine());
-
-        int number = Integer.parseInt(st.nextToken());
-        int KIndex = Integer.parseInt(st.nextToken());
-        ArrayList<Integer> list = new ArrayList<>();
-        st = new StringTokenizer(br.readLine());
-
-        for (int i = 0; i < number; i++) {
-            list.add(Integer.parseInt(st.nextToken()));
+    public static int f7(int n){
+        int s = 1;
+        for(int i = 0; i < n; i++){
+            s += s + f7(i);
+            System.out.println("연산횟수 " + i);
         }
+        System.out.println("외부");
+        return s;
+    }
 
-        Collections.sort(list);
-
-        System.out.println(list.get(KIndex-1));
-
-        br.close();
-        bw.close();
+    public static void main(String[] args) throws Exception {
+        f7(2); // n입력
     }
 }
