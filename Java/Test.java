@@ -3,21 +3,24 @@ import java.util.*;
 
 
 class B{
-
-//    public B(){
-//        System.out.println("B");
-//    }
-//
-    public B(int b){
+    public void draw(){
         System.out.println("B");
     }
-
 }
 
 public class Test extends B{
 
-    public void Text() {
+    public void draw(){
         System.out.println("test");
     }
+
+    public static void main(String[] args) {
+
+        Test test = new Test();
+        B b = new B();
+        b = new Test();
+        b.draw();
+    }
+
 
 }
