@@ -1,26 +1,34 @@
-import java.io.*;
-import java.util.*;
+public class Test{
+
+    public static int dp(int[][] arr){
+        int max = 0;
+        int n = arr.length;
+
+        for(int i=0; i<n; i++){
+            for
+        }
 
 
-class B{
-    public void draw(){
-        System.out.println("B");
+        return max;
+
+
     }
-}
 
-public class Test extends B{
-
-    public void draw(){
-        System.out.println("test");
-    }
 
     public static void main(String[] args) {
+        int[][] arr = {
+                {1, 5, 10, 3, 9},
+                {3, 5, 14, 9, 0},
+                {8, 9, 7, 5, 4},
+                {20, 5, 4, 10, 5},
+                {1, 9, 8, 4, 3}
+        };
 
-        Test test = new Test();
-        B b = new B();
-        b = new Test();
-        b.draw();
+        System.out.println(dp(arr));
+
+
+
+//        System.out.println(N);
+
     }
-
-
 }
