@@ -1,13 +1,25 @@
-# Algorithm
+# 꾸준히 정리하는 Algorithm 저장소
 
-🌞 매일 아침 시작하는 알고리즘 스터디 백준 편 🌞
-
-[작성언어]
-
+### ✅ 작성언어
 - Python
 - Java
 - JS
 - C
+
+### 🎞️ 목차
+#### [그래프](https://github.com/hyunbin1/Algorithm/wiki#%EA%B7%B8%EB%9E%98%ED%94%84)
+1. 무향 연결 그래프
+	* [최소신장트리](https://github.com/hyunbin1/Algorithm/wiki#%EC%B5%9C%EC%86%8C%EC%8B%A0%EC%9E%A5%ED%8A%B8%EB%A6%ACminimum-spanning-trees)
+  	* [프림(Prim) 알고리즘](https://github.com/hyunbin1/Algorithm/wiki#%ED%94%84%EB%A6%BCprim-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98)
+  	* [크루스칼(Kruskal) 알고리즘](https://github.com/hyunbin1/Algorithm/wiki#%ED%81%AC%EB%A3%A8%EC%8A%A4%EC%B9%BCkruskal-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98)
+  	
+2. 유향 연결 그래프
+  	* [위상 연결 그래프](https://github.com/hyunbin1/Algorithm/wiki#%EC%9C%A0%ED%96%A5%EC%97%B0%EA%B2%B0%EA%B7%B8%EB%9E%98%ED%94%84)
+  	* [최단 경로 알고리즘](https://github.com/hyunbin1/Algorithm/wiki#%EC%B5%9C%EB%8B%A8-%EA%B2%BD%EB%A1%9C-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98shortest-paths)
+
+#### [그리디 알고리즘]()
+#### [문자열 알고리즘]()
+
 
 # 그래프
 
