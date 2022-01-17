@@ -12,16 +12,19 @@ public class Number10773 {
         for(int i=0; i<inputNum; i++){
             int number = Integer.parseInt(br.readLine());
             if(number == 0){
-                System.out.println(stack.pop());
                 stack.pop();
-                sum -= stack.peek();
             }
             else{
-                sum += number;
                 stack.push(number);
-                System.out.println(sum);
             }
         }
+
+        for(int num : stack){
+            sum += num;
+        }
         System.out.println(sum);
+
+        
+        
     }
 }
